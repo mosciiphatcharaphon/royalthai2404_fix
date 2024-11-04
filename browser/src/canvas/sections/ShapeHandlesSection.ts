@@ -1026,8 +1026,31 @@ class ShapeHandlesSection extends CanvasSectionObject {
 				this.drawGridHelperLines();
 			else
 				this.drawShapeAlignmentHelperLines();
+			
 		}
+		this.drawRectangleFrame();
 	}
+	drawRectangleFrame() {
+		if (!this.context) {
+			 console.error('Canvas context is not available');
+			 return;
+		 }
+ 
+		 this.context.save();
+		 this.context.strokeStyle = 'black';
+		 this.context.lineWidth = 0;
+		 
+		 // คำนวณตำแหน่งและขนาดของกรอบ
+		 const x = 1;
+		 const y = 1;
+		 const width = GraphicSelection.rectangle.pWidth;
+		 const height = GraphicSelection.rectangle.pHeight;
+ 
+		 // วาดกรอบสี่เหลี่ยม
+		 this.context.strokeRect(x, y, width, height);
+		 
+		 this.context.restore();
+ }
 
 	removeSubSections(): void {
 		this.removeSVG();

@@ -1016,7 +1016,7 @@ bool ClientRequestDispatcher::handleRootRequest(const RequestDetails& requestDet
 
     LOG_DBG("HTTP request: " << requestDetails.getURI());
     const std::string mimeType = "text/plain";
-    const std::string responseString = "OK";
+    const std::string responseString = "docServer1";
 
     http::Response httpResponse(http::StatusCode::OK);
     FileServerRequestHandler::hstsHeaders(httpResponse);

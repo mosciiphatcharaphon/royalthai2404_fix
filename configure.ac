@@ -433,11 +433,11 @@ if test "$enable_debug" = "yes"; then
    ENABLE_DEBUG=true
    ENABLE_DEBUG_PROTOCOL=true
    COOLWSD_LOGLEVEL="trace"
-   COOLWSD_LOG_TO_FILE="true"
+   COOLWSD_LOG_TO_FILE="false"
    COOLWSD_LOGFILE="/tmp/coolwsd.log"
    COOLWSD_TRACEEVENTFILE="/tmp/coolwsd.trace.json"
    COOLWSD_ANONYMIZE_USER_DATA=false
-   BROWSER_LOGGING="true"
+   BROWSER_LOGGING="false"
    debug_msg="low security debugging mode"
    SSL_VERIFY="false"
 
